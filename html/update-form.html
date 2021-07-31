@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>실시간 온·습도 회원가입</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/css/reset.css" />
+    <link rel="stylesheet" href="/css/update-form.css" />
+  </head>
+  <body>
+    <!-- ------------------------------------------- 헤더 ------------------------------------------- -->
+    <header class="header">
+      <h1 class="header__title">실시간 온·습도</h1>
+    </header>
+    <!-- ------------------------------------------- /헤더 ------------------------------------------- -->
+    <!-- ------------------------------------------- 메인 ------------------------------------------- -->
+    <main class="main">
+      <!-- ------------------------------------------- 회원가입 폼 ------------------------------------------- -->
+      <article class="update">
+        <h2 class="update__title">비밀번호 변경</h2>
+        <input type="password" id="newPassword" name="newPassword" placeholder="새 비밀번호" class="update__input" />
+        <button id="btnUpdate" class="update__btn">비밀번호 변경</button>
+      </article>
+      <!-- ------------------------------------------- /회원가입 폼 ------------------------------------------- -->
+    </main>
+    <!-- ------------------------------------------- /메인 ------------------------------------------- -->
+    <!-- ------------------------------------------- 푸터 ------------------------------------------- -->
+    <footer class="footer"></footer>
+    <!-- ------------------------------------------- /푸터 ------------------------------------------- -->
+  </body>
+  <script>
+    const BTN_UPDATE = document.getElementById('btnUpdate');
+    const INPUT_PW = document.getElementById('newPassword');
+
+    BTN_UPDATE.addEventListener('click', () => {
+      fetch(`/update?newPassword=${INPUT_PW.value}`, { method: 'PATCH' })
+        .then((res) => res.text())
+        .then((res) => {
+          alert(res);
+          location.href = '/';
+        })
+        .catch((e) => console.log(e));
+    });
+  </script>
+</html>

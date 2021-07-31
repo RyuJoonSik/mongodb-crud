@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>실시간 온·습도 로그인</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/css/reset.css" />
+    <link rel="stylesheet" href="/css/main.css" />
+  </head>
+  <body>
+    <!-- ------------------------------------------- 헤더 ------------------------------------------- -->
+    <header class="header">
+      <h1 class="header__title">실시간 온·습도</h1>
+      <ul class="user">
+        <li><a href="/logout" class="user__link">로그아웃</a></li>
+        <li><a href="/html/update-form.html" class="user__link">비밀번호 변경</a></li>
+        <li><button id="btnDelete" class="user__btn">회원 탈퇴</button></li>
+      </ul>
+    </header>
+    <!-- ------------------------------------------- /헤더 ------------------------------------------- -->
+    <!-- ------------------------------------------- 메인 ------------------------------------------- -->
+    <main class="main">
+      <!-- ------------------------------------------- 로그인 폼 ------------------------------------------- -->
+      <article class="canvas">
+        <h2 class="canvas__title">온도 : <strong id="tempVal" class="canvas__value">불러오는 중...</strong></h2>
+        <canvas id="dashboard-temp" class="canvas__content">현재 브라우저는 canvas를 지원하지 않습니다.</canvas>
+      </article>
+      <article class="canvas">
+        <h2 class="canvas__title">습도 : <strong id="humVal" class="canvas__value">불러오는 중...</strong></h2>
+        <canvas id="dashboard-hum" class="canvas__content">현재 브라우저는 canvas를 지원하지 않습니다.</canvas>
+      </article>
+      <!-- ------------------------------------------- /로그인 폼 ------------------------------------------- -->
+    </main>
+    <!-- ------------------------------------------- /메인 ------------------------------------------- -->
+    <!-- ------------------------------------------- 푸터 ------------------------------------------- -->
+    <footer class="footer">
+      <time class="footer_time">불러오는 중...</time>
+    </footer>
+    <!-- ------------------------------------------- /푸터 ------------------------------------------- -->
+    <script src="/js/main.js" type="module"></script>
+  </body>
+</html>

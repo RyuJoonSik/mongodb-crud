@@ -1,0 +1,29 @@
+{
+  "name": "user",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "scripts": {
+    "server": "nodemon ./js/server.js",
+    "bundle": "webpack"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "css-loader": "^6.2.0",
+    "eslint": "^7.31.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.1.0",
+    "mongoose": "^5.13.3",
+    "nodemon": "^2.0.12",
+    "prettier": "2.3.2",
+    "serialport": "^9.2.0",
+    "style-loader": "^3.2.1",
+    "webpack": "^5.46.0",
+    "webpack-cli": "^4.7.2"
+  }
+}

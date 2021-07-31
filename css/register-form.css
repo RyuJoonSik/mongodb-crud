@@ -1,0 +1,88 @@
+:root {
+  --section-bg-color: #2f78c5;
+  --btn-bg-color: #0f60b6;
+  --form-bg-color: #f8f8f8;
+  --header-height: 10%;
+  --main-height: 80%;
+  --footer-height: 10%;
+}
+html {
+  height: 100%;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+/* ---------------------------------------------------------------------- SECTION ---------------------------------------------------------------------- */
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: var(--header-height);
+  padding: 0 2rem;
+  background-color: var(--section-bg-color);
+}
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: var(--main-height);
+}
+.footer {
+  height: var(--footer-height);
+  background-color: var(--section-bg-color);
+}
+/* ---------------------------------------------------------------------- /SECTION ---------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------- HEADER ---------------------------------------------------------------------- */
+.header__title {
+  color: #fff;
+  font-size: 3rem;
+}
+/* ---------------------------------------------------------------------- /HEADER ---------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------- MAIN ---------------------------------------------------------------------- */
+.register {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-basis: 60%;
+  box-sizing: border-box;
+  width: 40%;
+  padding: 3rem;
+  background-color: var(--form-bg-color);
+}
+.register__input,
+.register__btn {
+  height: 10%;
+  font-size: 1.5rem;
+  padding: 1rem 0;
+}
+.register__title {
+  font-size: 3rem;
+  text-align: center;
+}
+.register__input {
+  display: block;
+  border: 1px solid #ccc;
+  text-indent: 1rem;
+}
+.register__btn {
+  box-sizing: content-box;
+  background-color: var(--btn-bg-color);
+  border: 0;
+  color: #fff;
+  font-weight: bold;
+}
+/* ---------------------------------------------------------------------- /MAIN ---------------------------------------------------------------------- */
+@media screen and (orientation: portrait) {
+  .header__title {
+    font-size: 2rem;
+  }
+  .register {
+    justify-content: space-evenly;
+    flex: 1;
+    width: 100%;
+    padding: 1rem;
+  }
+}

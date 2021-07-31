@@ -1,0 +1,86 @@
+:root {
+  --section-bg-color: #2f78c5;
+  --btn-bg-color: #0f60b6;
+  --form-bg-color: #f8f8f8;
+  --header-height: 10%;
+  --main-height: 80%;
+  --footer-height: 10%;
+}
+html {
+  height: 100%;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+/* ---------------------------------------------------------------------- SECTION ---------------------------------------------------------------------- */
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: var(--header-height);
+  padding: 0 2rem;
+  background-color: var(--section-bg-color);
+}
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: var(--main-height);
+}
+.footer {
+  height: var(--footer-height);
+  background-color: var(--section-bg-color);
+}
+/* ---------------------------------------------------------------------- /SECTION ---------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------- HEADER ---------------------------------------------------------------------- */
+.header__title {
+  color: #fff;
+  font-size: 3rem;
+}
+/* ---------------------------------------------------------------------- /HEADER ---------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------- MAIN ---------------------------------------------------------------------- */
+.register-fail {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-basis: 45%;
+  box-sizing: border-box;
+  width: 40%;
+  padding: 3rem;
+  background-color: var(--form-bg-color);
+}
+.register-fail__title {
+  font-size: 2.5rem;
+  text-align: center;
+}
+.register-fail__desc {
+  font-size: 1.1rem;
+  text-align: center;
+  text-decoration: underline;
+}
+.register-fail__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10%;
+  padding: 1rem 0;
+  background-color: var(--btn-bg-color);
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+/* ---------------------------------------------------------------------- /MAIN ---------------------------------------------------------------------- */
+@media screen and (orientation: portrait) {
+  .header__title {
+    font-size: 2rem;
+  }
+  .register-fail {
+    justify-content: space-evenly;
+    flex: 1;
+    width: 100%;
+    padding: 1rem;
+  }
+}
